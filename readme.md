@@ -1,4 +1,4 @@
-#rusty-sorting-algorithms
+# rusty-sorting-algorithms
 
 Yet another repo implementing basic sorting algorithms for study, this is my turn using Rust.
 
