@@ -54,7 +54,17 @@ mod tests {
     }
 
     #[bench]
+    fn bench_bubble_sort_ordered(b: &mut Bencher) {
+        b.iter(|| bubble::sort(vec![0, 1, 1, 3, 4, 4, 6, 8, 9]));
+    }
+
+    #[bench]
     fn bench_bubble_sort_improved(b: &mut Bencher) {
         b.iter(|| bubble::sort_improved(vec![4, 1, 3, 6, 8, 9, 4, 1, 0]));
+    }
+
+    #[bench]
+    fn bench_bubble_sort_improved_ordered(b: &mut Bencher) {
+        b.iter(|| bubble::sort_improved(vec![0, 1, 1, 3, 4, 4, 6, 8, 9]));
     }
 }
