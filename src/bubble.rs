@@ -50,11 +50,11 @@ mod tests {
     }
 
     #[bench]
-    fn bench_bubble_sort_ordered_1000(b: &mut Bencher) {
+    fn bench_bubble_sort_1000(b: &mut Bencher) {
         let before = SystemTime::now();
         b.iter(|| bubble::sort(random_vector(1000)));
         println!(
-            "bench_bubble_sort_ordered_1000 {:?}",
+            "bench_bubble_sort_1000 {:?}",
             SystemTime::now().duration_since(before).unwrap()
         );
     }

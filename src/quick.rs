@@ -32,11 +32,11 @@ pub fn sort (list: Vec<isize>) -> Vec<isize> {
 
 #[cfg(test)]
 mod tests {
+    use std::time::SystemTime;
     use test::Bencher;
     use tools::random_vector;
     use quick;
 
-    use std::time::SystemTime;
     #[test]
     fn quick_sort_should_sort() {
         assert_eq!(
@@ -76,11 +76,11 @@ mod tests {
     }
 
     #[bench]
-    fn bench_quick_sort_ordered_1000(b: &mut Bencher) {
+    fn bench_quick_sort_1000(b: &mut Bencher) {
         let before = SystemTime::now();
         b.iter(|| quick::sort(random_vector(1000)));
         println!(
-            "bench_quick_sort_ordered_1000 {:?}",
+            "bench_quick_sort_1000 {:?}",
             SystemTime::now().duration_since(before).unwrap()
         );
     }
