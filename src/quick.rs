@@ -33,6 +33,7 @@ pub fn sort (list: Vec<isize>) -> Vec<isize> {
 #[cfg(test)]
 mod tests {
     use test::Bencher;
+    use tools::random_vector;
     use quick;
 
     use std::time::SystemTime;
@@ -46,16 +47,41 @@ mod tests {
 
     #[bench]
     fn bench_quick_sort_good_pivot(b: &mut Bencher) {
+        let before = SystemTime::now();
         b.iter(|| quick::sort(vec![4, 1, 3, 6, 8, 9, 4, 1, 0, 5]));
+        println!(
+            "bench_quick_sort_good_pivot {:?}",
+            SystemTime::now().duration_since(before).unwrap()
+        );
     }
 
     #[bench]
     fn bench_quick_sort(b: &mut Bencher) {
+        let before = SystemTime::now();
         b.iter(|| quick::sort(vec![4, 1, 3, 6, 8, 9, 4, 1, 0]));
+        println!(
+            "bench_quick_sort {:?}",
+            SystemTime::now().duration_since(before).unwrap()
+        );
     }
 
     #[bench]
     fn bench_quick_sort_ordered(b: &mut Bencher) {
+        let before = SystemTime::now();
         b.iter(|| quick::sort(vec![0, 1, 1, 3, 4, 4, 6, 8, 9]));
+        println!(
+            "bench_quick_sort_ordered {:?}",
+            SystemTime::now().duration_since(before).unwrap()
+        );
+    }
+
+    #[bench]
+    fn bench_quick_sort_ordered_1000(b: &mut Bencher) {
+        let before = SystemTime::now();
+        b.iter(|| quick::sort(random_vector(1000)));
+        println!(
+            "bench_quick_sort_ordered_1000 {:?}",
+            SystemTime::now().duration_since(before).unwrap()
+        );
     }
 }
