@@ -6,7 +6,7 @@ Yet another repo implementing basic sorting algorithms for study, this is my tur
 
  - [x] [Bubble Sort](https://brilliant.org/wiki/bubble-sort/)
  - [x] [Merge Sort](https://brilliant.org/wiki/merge/)
- - [ ] [Insertion Sort](https://brilliant.org/wiki/insertion/)
+ - [x] [Insertion Sort](https://brilliant.org/wiki/insertion/)
  - [x] [Quicksort](https://brilliant.org/wiki/quick-sort/)
  - [ ] [Heapsort](https://brilliant.org/wiki/heap-sort/)
  - [ ] [Counting Sort](https://brilliant.org/wiki/counting-sort/)
