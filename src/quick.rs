@@ -45,6 +45,14 @@ mod tests {
         );
     }
 
+    #[test]
+    fn quick_sort_should_sort_ordered() {
+        assert_eq!(
+            quick::sort(vec![0, 1, 1, 3, 4, 4, 6, 8, 9]),
+            vec![0, 1, 1, 3, 4, 4, 6, 8, 9]
+        );
+    }
+
     #[bench]
     fn bench_quick_sort_good_pivot(b: &mut Bencher) {
         let before = SystemTime::now();

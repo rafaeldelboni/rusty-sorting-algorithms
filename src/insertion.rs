@@ -28,6 +28,14 @@ mod tests {
         );
     }
 
+    #[test]
+    fn insertion_sort_should_sort_ordered() {
+        assert_eq!(
+            insertion::sort(vec![0, 1, 1, 3, 4, 4, 6, 8, 9]),
+            vec![0, 1, 1, 3, 4, 4, 6, 8, 9]
+        );
+    }
+
     #[bench]
     fn bench_insertion_sort(b: &mut Bencher) {
         let before = SystemTime::now();
