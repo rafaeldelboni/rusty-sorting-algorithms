@@ -9,7 +9,7 @@ Yet another repo implementing basic sorting algorithms for study, this is my tur
  - [x] [Insertion Sort](https://brilliant.org/wiki/insertion/)
  - [x] [Quicksort](https://brilliant.org/wiki/quick-sort/)
  - [x] [Heapsort](https://brilliant.org/wiki/heap-sort/)
- - [ ] [Counting Sort](https://brilliant.org/wiki/counting-sort/)
+ - [x] [Counting Sort](https://brilliant.org/wiki/counting-sort/)
 
 ## Bench
 

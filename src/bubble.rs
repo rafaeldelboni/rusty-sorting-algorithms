@@ -29,6 +29,14 @@ mod tests {
         );
     }
 
+    #[test]
+    fn bubble_sort_should_sort_ordered() {
+        assert_eq!(
+            bubble::sort(vec![0, 1, 1, 3, 4, 4, 6, 8, 9]),
+            vec![0, 1, 1, 3, 4, 4, 6, 8, 9]
+        );
+    }
+
     #[bench]
     fn bench_bubble_sort(b: &mut Bencher) {
         let before = SystemTime::now();
