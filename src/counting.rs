@@ -23,7 +23,7 @@ pub fn sort (list: Vec<isize>) -> Vec<isize> {
     }
 
     for index in (0..len).rev() {
-        let mut current_position = count_list[list[index] as usize] as usize;
+        let current_position = count_list[list[index] as usize] as usize;
         result_list[current_position - 1] = list[index];
         count_list[list[index] as usize] -= 1;
     }
